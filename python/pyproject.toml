@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qrdot"
+version = "0.1.1"
+description = "Official Python client for the QR. API (qrdot.dev)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "QR.", email = "hello@qrdot.dev" }]
+keywords = ["qr", "qrcode", "qrdot", "api"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://qrdot.dev/libraries/"
+Documentation = "https://qrdot.dev/docs/"
+Repository = "https://github.com/intuitix/qrdot"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qrdot"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/qrdot" = "qrdot"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/qrdot", "README.md", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
