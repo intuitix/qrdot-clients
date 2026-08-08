@@ -6,6 +6,8 @@ Official PHP client for the [QR.](https://qrdot.dev) API.
 composer require intuitix/qrdot-php
 ```
 
+Source: public mirror [`intuitix/qrdot-clients`](https://github.com/intuitix/qrdot-clients) (`php/`). Packagist package path = `php`.
+
 ## Quick start
 
 ```php
