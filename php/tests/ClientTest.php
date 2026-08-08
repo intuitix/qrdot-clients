@@ -31,7 +31,8 @@ final class ClientTest extends TestCase
     public function testApiErrorType(): void
     {
         $e = new ApiError('validation', 'bad', 400);
-        $this->assertSame('validation', $e->code);
+        $this->assertSame('validation', $e->errorCode);
+        $this->assertSame('validation', $e->code); // legacy alias
         $this->assertSame(400, $e->status);
     }
 

@@ -6,12 +6,24 @@ namespace Qrdot;
 
 final class ApiError extends \RuntimeException
 {
+    /**
+     * @param string $errorCode API error code (e.g. validation_error). Not Exception::$code.
+     */
     public function __construct(
-        public readonly string $code,
+        public readonly string $errorCode,
         string $message,
         public readonly int $status,
     ) {
         parent::__construct($message, $status);
+    }
+
+    /** @deprecated Use $errorCode — kept for Node-SDK mental model */
+    public function __get(string $name): mixed
+    {
+        if ($name === 'code') {
+            return $this->errorCode;
+        }
+        throw new \Error('Undefined property ' . self::class . '::$' . $name);
     }
 }
 
