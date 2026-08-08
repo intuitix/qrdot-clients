@@ -92,7 +92,6 @@ final class Client
         ]);
         curl_exec($ch);
         $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
         return $status;
     }
 
@@ -136,12 +135,10 @@ final class Client
         $raw = curl_exec($ch);
         if ($raw === false) {
             $err = curl_error($ch);
-            curl_close($ch);
             throw new \RuntimeException($err);
         }
         $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $headerSize = (int) curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-        curl_close($ch);
         $headerBlob = substr((string) $raw, 0, $headerSize);
         $data = substr((string) $raw, $headerSize);
         $contentType = null;
