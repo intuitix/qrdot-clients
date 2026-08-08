@@ -1,1 +1,0 @@
-{"version":2,"defects":[],"times":{"Qrdot\\Tests\\ClientTest::testRejectsBadKey":0.004,"Qrdot\\Tests\\ClientTest::testVerifyWebhookSignature":0.001,"Qrdot\\Tests\\ClientTest::testApiErrorType":0,"Qrdot\\Tests\\ClientTest::testClientExposesNodeParityResources":0}}
