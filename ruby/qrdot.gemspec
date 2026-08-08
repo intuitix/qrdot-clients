@@ -8,12 +8,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["QR."]
   spec.email         = ["hello@qrdot.dev"]
   spec.summary       = "Official Ruby client for the QR. API"
-  spec.description   = "Thin REST client for qrdot.dev — create dynamic QR codes, images, logos, webhooks."
+  spec.description   = "Thin REST client for qrdot.dev — create dynamic QR codes, images, logos, webhooks, domains."
   spec.homepage      = "https://qrdot.dev/libraries/"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
-  spec.metadata["source_code_uri"] = "https://github.com/intuitix/qrdot/tree/main/clients/ruby"
+  spec.metadata["source_code_uri"] = "https://github.com/intuitix/qrdot-clients/tree/main/ruby"
+  spec.metadata["changelog_uri"] = "https://github.com/intuitix/qrdot-clients/releases"
+  spec.metadata["bug_tracker_uri"] = "https://github.com/intuitix/qrdot-clients/issues"
   spec.metadata["documentation_uri"] = "https://qrdot.dev/docs/"
+  spec.metadata["rubygems_mfa_required"] = "true"
   spec.files = Dir["lib/**/*", "README.md", "LICENSE"]
   spec.require_paths = ["lib"]
   spec.add_development_dependency "minitest", "~> 5.0"
