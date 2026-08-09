@@ -11,7 +11,7 @@ pip install qrdot
 ```python
 from qrdot import Qrdot
 
-client = Qrdot(api_key="sk_test_…")  # or sk_live_…
+client = Qrdot(api_key="sk_live_…")
 
 qr = client.qr.create({
     "targetUrl": "https://example.com",

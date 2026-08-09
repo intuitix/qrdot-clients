@@ -6,7 +6,7 @@ module Qrdot
 
     def initialize(api_key, base_url: "https://api.qrdot.dev")
       unless api_key.start_with?("sk_test_", "sk_live_")
-        raise ArgumentError, "api_key must start with sk_test_ or sk_live_"
+        raise ArgumentError, "api_key must start with sk_live_ (legacy sk_test_ accepted)"
       end
 
       @api_key = api_key

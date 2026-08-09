@@ -41,10 +41,10 @@ type Client struct {
 	Domains   *DomainsResource
 }
 
-// New creates a client. apiKey must start with sk_test_ or sk_live_.
+// New creates a client. apiKey must start with sk_live_ (legacy sk_test_ accepted).
 func New(apiKey string) (*Client, error) {
 	if !strings.HasPrefix(apiKey, "sk_test_") && !strings.HasPrefix(apiKey, "sk_live_") {
-		return nil, fmt.Errorf("apiKey must start with sk_test_ or sk_live_")
+		return nil, fmt.Errorf("apiKey must start with sk_live_ (legacy sk_test_ accepted)")
 	}
 	c := &Client{
 		APIKey:     apiKey,

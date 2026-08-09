@@ -40,7 +40,7 @@ final class Client
         private readonly string $baseUrl = 'https://api.qrdot.dev',
     ) {
         if (!str_starts_with($apiKey, 'sk_test_') && !str_starts_with($apiKey, 'sk_live_')) {
-            throw new \InvalidArgumentException('apiKey must start with sk_test_ or sk_live_');
+            throw new \InvalidArgumentException('apiKey must start with sk_live_ (legacy sk_test_ accepted)');
         }
         $this->qr = new QrResource($this);
         $this->assets = new AssetsResource($this);

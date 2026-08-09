@@ -58,7 +58,7 @@ class Qrdot:
         base_url: str = "https://api.qrdot.dev",
     ) -> None:
         if not (api_key.startswith("sk_test_") or api_key.startswith("sk_live_")):
-            raise ValueError("api_key must start with sk_test_ or sk_live_")
+            raise ValueError("api_key must start with sk_live_ (legacy sk_test_ accepted)")
         self.api_key = api_key
         self.base_url = base_url.rstrip("/")
         self.qr = _QrResource(self)
