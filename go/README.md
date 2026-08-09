@@ -5,7 +5,7 @@ Official Go client for the [QR.](https://qrdot.dev) API.
 Published from the public mirror [`intuitix/qrdot-clients`](https://github.com/intuitix/qrdot-clients) (the product monorepo stays private).
 
 ```bash
-go get github.com/intuitix/qrdot-clients/go@v0.1.1
+go get github.com/intuitix/qrdot-clients/go@v0.1.2
 ```
 
 ## Quick start

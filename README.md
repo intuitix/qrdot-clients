@@ -5,7 +5,7 @@ Public language clients for the [QR.](https://qrdot.dev) Dynamic QR API.
 | Language | Path | Install |
 |----------|------|---------|
 | Python | [`python/`](./python/) | `pip install qrdot` |
-| Go | [`go/`](./go/) | `go get github.com/intuitix/qrdot-clients/go@v0.1.1` |
+| Go | [`go/`](./go/) | `go get github.com/intuitix/qrdot-clients/go@v0.1.2` |
 | PHP | [`php/`](./php/) | `composer require intuitix/qrdot-php` (Packagist) |
 | Ruby | [`ruby/`](./ruby/) | `gem install qrdot` |
 
