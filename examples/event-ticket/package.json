@@ -1,0 +1,20 @@
+{
+  "name": "qrdot-event-ticket-example",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Issue event ticket QRs with expire/maxScans, export PNG/PDF, then PATCH the landing",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "issue": "node issue.js",
+    "image": "node image.js",
+    "doors-open": "node doors-open.js",
+    "batch-sample": "node batch-sample.js",
+    "test": "node --test lib/ticket.test.js"
+  },
+  "dependencies": {
+    "@qrdot/sdk": "^0.1.2"
+  }
+}
